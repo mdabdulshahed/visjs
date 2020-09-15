@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timeline</title>
+    <script src="//unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <!-- <link
+      href="//unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
+    <style type="text/css">
+      #parent {
+        width: auto;
+        height: 400px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent"></div>
+    <script>
+      var mydiv = document.getElementById("parent");
+
+      var items = new vis.DataSet([
+        { id: 1, content: "item 1", start: "2020-01-20", end: "2020-03-28" },
+        { id: 2, content: "item 2", start: "2020-02-14", end: "2020-02-21" },
+        { id: 3, content: "item 3", start: "2020-03-18" },
+        { id: 4, content: "item 4", start: "2020-04-16", end: "2020-04-19" },
+        { id: 5, content: "item 5", start: "2020-05-25", type: "point" },
+        { id: 6, content: "item 6", start: "2020-06-27", end: "2020-07-10" },
+        { id: 7, content: "item 7", start: "2020-07-20", end: "2020-08-3" },
+        { id: 8, content: "item 8", start: "2020-08-2", end: "2020-08-15" },
+        { id: 9, content: "item 9", start: "2020-08-29", end: "2020-09-30" },
+        { id: 10, content: "item 10", start: "2020-09-14", end: "2020-09-25" },
+        { id: 11, content: "item 11", start: "2020-09-5", end: "2020-09-15" },
+        { id: 12, content: "item 12", start: "2020-010-6" },
+      ]);
+
+      var options = {};
+
+      var timeline = new vis.Timeline(mydiv, items, options);
+    </script>
+  </body>
+</html>
